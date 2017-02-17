@@ -15,7 +15,7 @@ def reply_text(reply_token, text):
     reply = text
     payload = {
         'replyToken': reply_token,
-        'message': [
+        'messages': [
             {
                 'type': 'text',
                 'text': reply,
