@@ -23,15 +23,16 @@ def reply_text(reply_token, text):
         ]
     }
 
-    requests.post(REPLY_ENDPOINT, headers=HEADER, data=json.dumps(payload))
+    result = requests.post(REPLY_ENDPOINT, headers=HEADER, data=json.dumps(payload))
+    print('result: ', result)
     return reply
 
 def callback(request):
     reply = ''
-    print('requiest: ', request)
     request_json = json.loads(request.body.decode('utf-8'))
     for e in request_json['events']:
         reply_token = e['replyToken']
+        print('replyToken: ', reply_token)
         message_type = e['message']['type']
 
         if message_type == 'text':
