@@ -25,7 +25,7 @@ SECRET_KEY = 'ddfdk=t2z)q8(^7-9)y$ey#ddbyipf4#kn4*+l51**bjllfege'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'kage-line-bot.herokuapp.com']
 
 
 # Application definition
