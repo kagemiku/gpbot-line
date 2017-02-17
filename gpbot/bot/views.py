@@ -32,7 +32,6 @@ def callback(request):
     request_json = json.loads(request.body.decode('utf-8'))
     for e in request_json['events']:
         reply_token = e['replyToken']
-        print('replyToken: ', reply_token)
         message_type = e['message']['type']
 
         if message_type == 'text':
